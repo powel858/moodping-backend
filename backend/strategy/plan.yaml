@@ -1,0 +1,5 @@
+plan:
+  sprint_1:
+    batch:
+	    config
+	    kakao_authentication
