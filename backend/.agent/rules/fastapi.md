@@ -12,6 +12,7 @@ Key Principles
 - Use explicit variable names and comprehensive type hints.
 - Favor standard "Enterprise" patterns familiar to Spring/Java developers.
 
+Python/FastAPI Architecture
 
 - **Controller**: Handles HTTP requests/responses only. Delegates business logic to Service.
 - **Service Layer**:
