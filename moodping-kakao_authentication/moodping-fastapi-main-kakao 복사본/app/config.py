@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     # 카카오 OAuth
     kakao_client_id: str = ""
     kakao_client_secret: str = ""  # 앱 키 > REST API 키 > Client Secret (필수)
-    kakao_redirect_uri: str = "http://localhost:33333/kakao-authentication/request-access-token-after-redirection"
+    kakao_redirect_uri: str = "http://localhost:8000/kakao-auth/callback"
 
     # JWT
     jwt_secret_key: str = "change-me-in-production"

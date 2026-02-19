@@ -10,6 +10,9 @@ from app.domain.event.router import router as event_router
 from app.domain.user.router import router as user_router
 from app.domain.auth.router import router as auth_router, kakao_redirect_router
 from app.domain.report.router import router as report_router
+from app.kakao_authentication.controller.kakao_authentication_controller import (
+    kakao_authentication_router,
+)
 from app.config import get_settings
 from app.database import engine, Base
 
@@ -42,6 +45,7 @@ app = FastAPI(
 
 app.include_router(auth_router)
 app.include_router(kakao_redirect_router)
+app.include_router(kakao_authentication_router)
 app.include_router(mood_router)
 app.include_router(event_router)
 app.include_router(user_router)

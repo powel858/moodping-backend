@@ -111,7 +111,7 @@ function renderNavAuth(navActionsEl) {
     if (isLoggedIn()) {
         fetchUserInfo().then(user => {
             if (!user) {
-                navActionsEl.innerHTML = `<a href="/auth/kakao" class="btn-kakao">${kakaoIcon()} 로그인</a>`;
+                navActionsEl.innerHTML = `<a href="/kakao-auth/request-oauth-link" class="btn-kakao">${kakaoIcon()} 로그인</a>`;
                 return;
             }
             const img = user.profile_image
@@ -126,7 +126,7 @@ function renderNavAuth(navActionsEl) {
             `;
         });
     } else {
-        navActionsEl.innerHTML = `<a href="/auth/kakao" class="btn-kakao">${kakaoIcon()} 로그인</a>`;
+        navActionsEl.innerHTML = `<a href="/kakao-auth/request-oauth-link" class="btn-kakao">${kakaoIcon()} 로그인</a>`;
     }
 }
 
